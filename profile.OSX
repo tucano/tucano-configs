@@ -145,7 +145,7 @@ bash_prompt() {
     local UC=$G                 # user's color
     [ $UID -eq "0" ] && UC=$R   # root's color
     
-    PS1="$TITLEBAR${EMK}[${UC}\u${EMK}@${UC}\h ${EMB}\${NEW_PWD}${EMY}\$(parse_git_branch)${EMK}]${UC}\\$ ${NONE}"
+    PS1="$TITLEBAR${EMK}[${UC}\u@\h ${EMB}\${NEW_PWD}${EMY} \$(parse_git_branch)${EMK}]${UC}\\$ ${NONE}"
     # without colors: PS1="[\u@\h \${NEW_PWD}]\\$ "
     # extra backslash in front of \$ to make bash colorize the prompt
 	# set the PS2 variable
