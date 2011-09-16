@@ -156,12 +156,13 @@ bash_prompt() {
 PROMPT_COMMAND=bash_prompt_command
 bash_prompt
 unset bash_prompt
-# set the PS1 variable
-#PS1="[\u@\h:\W ]$ "
 
 ##################################
 # LAST PATH ADDS and LOGS
 ##################################
 
 export PATH=/usr/local/bin:$PATH
+
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
