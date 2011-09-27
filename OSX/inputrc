@@ -1,0 +1,8 @@
+# config file for readline http://code.google.com/p/iterm2/wiki/Keybindings
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# A good compromise is thus using a modifier combination of ALT with the left/right arrow keys for word jumping. This can be defined as follows in your inputrc:
+"\e[1;9D": backward-word
+"\e[1;9C": forward-word
