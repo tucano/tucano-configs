@@ -1,0 +1,28 @@
+screen -t bash           0 
+screen -t bash           1 
+screen -t bash           2
+screen -t bash           3
+screen -t bash           4
+screen -t bash           5
+screen -t bash           6
+screen -t bash           7
+screen -t bash           8
+screen -t bash           9
+
+altscreen on
+term screen-256color
+defscrollback 30000 # Use a 30000-line scrollback buffer
+
+#bindkey ^[[1;5D prev # linux Ctrl-left
+#bindkey ^[[1;5C next # linux Ctrl-right
+
+bindkey "^[[5D" prev # OSX
+bindkey "^[[5C" next # OSX
+
+#change the hardstatus settings to give an window list at the bottom of the                                                                        
+#screen, with the time and date and with the current window highlighted                                                                            
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+# xterm scroll fix
+termcapinfo xterm* ti@:te@
